@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+    
+</head>
+<body>
+    <div id="formulario" class="formulario">
+        <h1>Bienvenido</h1>
+        <form method="post">
+            <div id="emailDiv" class="username">
+                <input type="email" id="email" required>
+                <label class="lbl">Email</label>
+            </div>
+
+            <div id="passwordDiv" class="username">
+                <input type="password" id="password" required>
+                <label class="lbl">Contraseña</label>
+            </div>
+
+            <input type="submit" value="Inciar Sesion">
+
+        </form>
+        
+        <div class="recordar">¿Olvidaste tu contraseña?</div>
+
+    </div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1"></script> -->
+    <script type="module" src="./app.js"></script>
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+</body>
+</html>

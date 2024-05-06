@@ -1,0 +1,165 @@
+body{
+    margin:0;
+    padding:0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background:linear-gradient(120deg, #C2F1FA, #D2B4DE);
+    height: 100vh;
+    
+}
+
+.formulario{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+}
+.formulario h1{
+    text-align: center;
+    padding: 0 0 20px 0;
+    color: gray;
+    
+}
+.formulario form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+form .username{
+    position: relative;
+    border-bottom: 2px solid silver;
+    margin: 30px 0;
+
+}
+.username input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 18px;
+    border:none;
+    background: none;
+    outline:none;
+    color:grey;
+    
+}
+.username label{
+    position: absolute;
+    top:50%;
+    left:10px;
+    color:silver;
+    transform:translateY(-70%);
+    font-size: 18px;
+    pointer-events: none;
+    transition: all .5s ease;
+
+}
+.username span::before {
+    content: " ";
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 5px;
+    background:#D2B4DE;
+    transform: .5s;
+}
+
+.username input:focus ~ label,
+.username input:valid ~ label {
+    top: -5px;
+    color: #D2B4DE;
+} 
+.username input:focus ~ span::before,
+.username input:focus ~ span::before{
+    width: 100%;
+}
+.recordar{
+    margin: 30px 0;
+    color: blue;
+    cursor: pointer;
+    text-align: center;
+
+}
+.recordar:hover{
+    text-decoration: underline;
+    
+}
+ input[type ="submit"]{
+    width: 100%;
+    height:50px;
+    border: 2px solid;
+    background:#D2B4DE;
+    border-radius: 30px;
+    font-size:18px;
+    color:white;
+    cursor: pointer;
+    outline: none;    
+    border-color:#D2B4DE;
+   
+}
+input[type ="submit"]:hover{
+    border-color:#C2F1FA; 
+    transform: .5s;
+}
+
+.incorrect{
+    width: 100%;
+    height:50px;
+    font-size:18px;
+    text-align: center;
+    color:#cf1259;   
+}
+
+#barra-lateral{
+    margin: 0;
+    padding: 0;
+    position:absolute;
+    width: 250px;
+    height:100%;
+    background: #dbe9ee;
+    
+}
+
+#barra-lateral ul {
+    
+    margin: 0;
+    padding: 0;
+    
+    
+}
+
+#barra-lateral header{
+    font-size:22px;
+    color: cadetblue;
+    text-align: center;
+    line-height: 70px;
+    background: #c0d6df;
+     user-select: none;
+}
+
+
+#barra-lateral ul a {
+   
+    display: block;
+    height:100%;
+    width: 100%;
+    line-height:50px;
+    font-size:20px;
+    color: black;
+    padding-left: 20px; 
+    box-sizing: border-box;
+    border-top: 1px solid darkslategray;
+    border-bottom: 1px solid darkslategray;
+    transition: .4s; 
+}
+
+ul li:hover a {
+    padding: 5px;
+}
+
+#barra-lateral ul a i {
+   
+    margin-right:16px;
+}
