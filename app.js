@@ -43,4 +43,13 @@ document.getElementById('formulario').addEventListener('submit', (event) => {
     
 
 })
+//Funcionalidad de la barra lateral
   
+const barraLateral = document.querySelector("#buscar")
+
+barraLateral.addEventListener("click", () => {
+   
+});
+
+
+
