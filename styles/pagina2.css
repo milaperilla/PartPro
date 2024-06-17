@@ -7,10 +7,7 @@ body{
     
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background:linear-gradient(45deg,#c2f1fa, #D2B4DE);
-    height: 100vh;
-    
-
-    
+    height: 100vh; 
 }
 .barra-lateral{
     position: fixed;
@@ -131,7 +128,6 @@ main{
      top:0;
      right:0px;	
      pointer-events: none;
-     
  }
 
  .fecha{
@@ -143,10 +139,7 @@ main{
     text-align: center;
     height: 50px;
     padding:10px;
-    cursor: pointer;
-   
-    
-    
+    cursor: pointer;   
  }
 
  .buscar-btn {
