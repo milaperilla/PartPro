@@ -37,10 +37,8 @@ document.getElementById('formulario').addEventListener('submit', (event) => {
     }
 
     if(email == "claribethperilla29@gmail.com" && password == "admin123") {
-        window.location.href = 'pagina2.html'
+        window.location.href = 'pagina2.html';
     }
-
-    
 
 })
 //Funcionalidad de la barra lateral
