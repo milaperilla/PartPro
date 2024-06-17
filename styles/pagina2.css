@@ -149,11 +149,13 @@ main{
     
  }
 
- button{
+ .buscar-btn {
     background: white;
-    color: gray;
+    color: black;
     margin-top:50px;
     border-radius:5px;
     margin-left: 400px;
-  
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
  }
