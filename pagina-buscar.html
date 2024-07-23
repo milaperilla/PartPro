@@ -6,7 +6,7 @@
     <title>Buscar Repuesto</title>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> 
-    <link rel="stylesheet" href="/styles/pagina2.css">
+    <link rel="stylesheet" href="/styles/pagina-buscar.css">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Rock+Salt&display=swap" rel="stylesheet">
     
 </head>
@@ -31,7 +31,7 @@
                 </li>
     
                 <li>
-                    <a href="./pagina3.html">
+                    <a href="./pagina-agregar.html">
                     <ion-icon name="add-circle-outline"></ion-icon>
                     <span>Agregar Repuesto</span>
                     </a>      
@@ -57,89 +57,71 @@
         
     </div>
     <main>
-        
-        <div class="contenedor-opcion">
-            
-            <div class = "nombre">
-                <label>Marca</label>
-            </div>
-
-                <div class="caja">
-                    <select>
+        <div class="container">
+            <div class="tittle"></div>
+            <form>
+                <div class="form-group">
+                    <span>Marca</span>
+                    <select class="caja">
                         <option>Chevrolet</option>
                         <option>Toyota</option>
                         <option>Subaru</option>
+                        <option>Kia</option>  
                     </select>
                 </div>
-        </div>
-            
 
-        <div class="contenedor-opcion">
-            
-            <div class = "nombre">
-                <label>Linea</label>
-            </div>
-
-                <div class="caja">
-                    <select>
-                        <option>Onix</option>
-                        <option>Corolla</option>
-                        <option>Forester</option>
+                <div class="form-group">
+                    <span>Linea</span>
+                    <select class="caja">
+                        <option>linea1</option>
+                        <option>linea2</option>
+                        <option>linea3</option>
+                        <option>linea4</option>  
                     </select>
                 </div>
-        </div>
-<!--input date-->
 
-        <div class="contenedor-opcion">
-            
-            <div class = "nombre">
-                <label class="lbl">Modelo desde</label>
-                <input class="fecha" type="date">
-            </div>
+    <!--Date desde-->
+                <div class="form-group">
+                    <span>Modelo desde</span>
+                    <input type="date" id="start">
+                </div>
+    <!--Date hasta-->
+                <div class="form-group">
+                    <span>Modelo hasta</span>
+                    <input type="date" id="start">
+                </div>
 
-            <div class = "nombre">
-                <label class="lbl">Hasta</label>
-                <input class="fecha" type="date">
-            </div>
-
-        </div>
-<!--input date-->
-
-        <div class="contenedor-opcion">
-            
-            <div class = "nombre">
-                <label>Tipo de repuesto</label>
-            </div>
-
-                <div class="caja">
-                    <select>
-                        <option>De transmision</option>
-                        <option>Del motor</option>
+                <div class="form-group">
+                    <span>Tipo de repuesto</span>
+                    <select class="caja">
+                        <option>Transmicion</option>
+                        <option>Motor</option>
                         <option>Suspencion</option>
-                        <option>Sistema electrico</option>
-                        <option>Sistema de frenos</option>
+                        <option>Electrico</option>
+                        <option>Frenos</option>
+                        <option>Otro</option>  
                     </select>
                 </div>
-        </div>
 
-        <div class="contenedor-opcion">
-            
-            <div class = "nombre">
-                <label>Categoria</label>
-            </div>
-
-                <div class="caja">
-                    <select>
+                <div class="form-group">
+                    <span>Categoria</span>
+                    <select class="caja">
                         <option>Kit de embargue</option>
                         <option>Correa</option>
                         <option>Amortiguadores</option>
                         <option>Bateria</option>
                         <option>Pastillas</option>
+                        <option>Otro</option>  
                     </select>
                 </div>
+
+                <div class="button">
+                    <input type="button" value="Buscar">
+                </div>
+
+            </form>
         </div>
-      
-        <button class="buscar-btn">Buscar</button>
+       
         
     </main>
     

@@ -1,0 +1,182 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background:linear-gradient(45deg,#c2f1fa, #D2B4DE);
+    height: 100vh; 
+}
+.barra-lateral{
+    position: fixed;
+    height: 100vh;
+    width: 300px;
+    padding:20px 15px;
+    color:gray;
+    background-color: ghostwhite; /*#e1e5f2*/
+    
+}
+.barra-lateral .nombre-software{
+    width: 100%;
+    line-height:70px;
+    margin-bottom: 20px;
+    font-family: "Rock Salt", cursive;
+    font-size:30px;
+    text-align: center;
+    color: gray;
+    /* padding-left: 20px;  */
+    /* box-sizing: border-box; */
+    /* border-top: 1px solid darkslategray;
+    border-bottom: 1px solid darkslategray; */
+    transition: .4s; 
+}
+
+.barra-lateral .navegacion li{
+    list-style: none;
+    display: flex;
+    margin-bottom: 5px;    
+}
+.barra-lateral .navegacion a{
+    border: 2px;
+    width: 100%;
+    height: 45px;
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: ghostwhite;
+    color: gray;
+}
+.barra-lateral .navegacion a:hover{
+    background-color:rgb(240, 236, 236);
+    color:black;
+}
+.barra-lateral .navegacion ion-icon{
+    min-width: 50px;
+    font-size: 30px;
+}
+
+.barra-lateral ul a {
+    
+    transition: .4s; 
+}
+
+ul li:hover a {
+    padding: 5px;
+}
+
+
+/*-------main------*/
+main{
+    margin-left: 300px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    max-width: 700px;
+    width: 100%;
+    padding: 25px 30px;
+    background-color: ghostwhite;
+    border-radius:20px;
+}
+/* .container .tittle{
+    font-size: 26px;
+    font-weight: 500;
+} */
+.container form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px 12px 0;
+}
+
+form .form-group{
+    margin-bottom: 15px;  
+    width: calc(100%/2);
+}
+
+form span{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.form-group input{
+    height: 40px;
+    width: 80%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #D2B4DE;
+    padding-left: 15px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+.form-group input:focus,
+.form-group input:valid{
+    border-color: #c2f1fa;
+}
+
+form .button{
+    width: 100%;
+    height: 40px;
+    margin: 40px 0;
+}
+
+form .button input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    cursor: pointer;
+    background: linear-gradient(130deg, #c2f1fa, #D2B4DE);
+    color: gray;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+}
+form .button input:hover{
+    background: linear-gradient(130deg, #D2B4DE, #c2f1fa);
+}
+ /* Estilo a los select */
+.caja {
+    margin:20px auto 40px auto;	
+    border:1px solid #D2B4DE;
+    height:30px;
+    overflow: hidden;
+    width: 230px;
+    position:relative;
+
+ }
+
+ select {
+    background:transparent;
+    border: none;
+    font-size: 14px;
+    height: 30px;
+    padding: 5px;
+    width: 250px;
+    cursor: pointer;
+ }
+ select:focus{ outline: none;}
+ 
+ .caja::after{
+     content:"\025be";
+     display:table-cell;
+     padding-top:7px;
+     text-align:center;
+     width:30px;
+     height:30px;
+     background-color:gray;
+     position:absolute;
+     top:0;
+     right:0px;	
+     pointer-events: none;
+ }

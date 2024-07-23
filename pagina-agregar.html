@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Repuesto</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> 
+    <link rel="stylesheet" href="/styles/pagina-agregar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Rock+Salt&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="barra-lateral">
+
+        <div class = "nombre-software">
+            <span>Part Pro</span>
+        </div>
+        <!-- <div class="icon-menu">
+            <span>&#9776;</span> -->
+        <nav class = "navegacion">
+            <ul>
+            
+                <li>
+                    <a href="/pagina-buscar.html">
+                    <ion-icon name="search-outline"></ion-icon>
+                    <span>Buscar Repuesto</span>
+                    </a>
+                </li>
+    
+                <li>
+                    <a href="/pagina-agregar.html">
+                    <ion-icon name="add-circle-outline"></ion-icon>
+                    <span>Agregar Repuesto</span>
+                    </a>      
+                </li>
+    
+                <li>
+                    <a href="#">
+                    <ion-icon name="settings-outline"></ion-icon>
+                    <span>Actualizar Repuesto</span> 
+                    </a>    
+                </li>
+    
+                <li>
+                    <a href="#">
+                    <ion-icon name="trash-outline"></ion-icon>
+                    <span>Eliminar Repuesto</span>
+                    </a>
+                </li>
+                
+            </ul>
+            
+        </nav>  
+        
+    </div>
+    <!--Lo que esta al lado derecho de la barra lateral-->
+    <main>
+        <div class="container">
+            <div class="tittle"></div>
+            <form>
+                <div class="form-group">
+                    <span>Marca</span>
+                    <select class="caja">
+                        <option>Chevrolet</option>
+                        <option>Toyota</option>
+                        <option>Subaru</option>
+                        <option>Kia</option>  
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <span>Linea</span>
+                    <input type="text" placeholder="Ingresa linea del vehiculo">
+                </div>
+
+    <!--Date desde-->
+                <div class="form-group">
+                    <span>Modelo desde</span>
+                    <input type="date" id="start">
+                </div>
+    <!--Date hasta-->
+                <div class="form-group">
+                    <span>Modelo hasta</span>
+                    <input type="date" id="start">
+                </div>
+
+                <div class="form-group">
+                    <span>Tipo de repuesto</span>
+                    <select>
+                        <option>Transmicion</option>
+                        <option>Motor</option>
+                        <option>Suspencion</option>
+                        <option>Electrico</option>
+                        <option>Frenos</option>
+                        <option>Otro</option>  
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <span>Categoria</span>
+                    <input type="text" placeholder="">
+                </div>
+
+                <div class="button">
+                    <input type="button" value="Guardar">
+                </div>
+
+            </form>
+        </div>
+       
+        
+    </main>
+    
+ 
+</body>
+</html>
