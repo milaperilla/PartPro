@@ -8,6 +8,7 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> 
     <link rel="stylesheet" href="/styles/pagina-agregar.css">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Rock+Salt&display=swap" rel="stylesheet">
+    
 </head>
 <body>
     <div class="barra-lateral">
@@ -57,7 +58,7 @@
     <main>
         <div class="container">
             <div class="tittle"></div>
-            <form>
+            <form id = "formulario">
                 <div class="form-group">
                     <span>Marca</span>
                     <select>
@@ -70,18 +71,29 @@
 
                 <div class="form-group">
                     <span>Linea</span>
-                    <input type="text" placeholder="Ingresa linea del vehiculo">
+                    <input id="linea" type="text" placeholder="Ingresa linea del vehiculo">
+                    <style>
+                        .estilo {
+                            color: white;
+                            background-color: rgba(200, 22, 22, 0.884);
+                            font-weight: bold;
+                            font-size: 14px;
+                            text-align: center;
+                            border-radius: 5px;
+                            
+                        }
+                    </style>
                 </div>
 
     <!--Date desde-->
                 <div class="form-group">
                     <span>Modelo desde</span>
-                    <input type="date" id="start">
+                    <input type="date" id="modelo">
                 </div>
     <!--Date hasta-->
                 <div class="form-group">
                     <span>Modelo hasta</span>
-                    <input type="date" id="start">
+                    <input type="date" id="modelo">
                 </div>
 
                 <div class="form-group">
@@ -98,7 +110,7 @@
 
                 <div class="form-group">
                     <span>Categoria</span>
-                    <input type="text" placeholder="">
+                    <input id="categoria" type="text" placeholder="Ingresa categoria">
                 </div>
 
                 <div class="button">
@@ -107,10 +119,12 @@
 
             </form>
         </div>
-       
+        
         
     </main>
     
- 
+   
+    <script type="module" src="/js/pagina-agregar.js"></script>
 </body>
+
 </html>
