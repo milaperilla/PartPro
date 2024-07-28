@@ -11,7 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const inputCategoria = document.querySelector('#categoria');
     const formulario = document.querySelector('#formulario');
     const inputDate = document.querySelector('#modelo');
-
+    // const btnSubmit = document.querySelector('#formulario button[type="submit"]');
+    const spinnerContainerDiv = document.querySelector('.container-div');
     
     
 
@@ -19,6 +20,54 @@ document.addEventListener('DOMContentLoaded', function() {
     inputLinea.addEventListener('blur', validar );
     inputCategoria.addEventListener('blur', validar);
     inputDate.addEventListener('blur', validar);
+    formulario.addEventListener('submit', enviarInfo);
+    
+    // Confirmaar que el formulario no este en blanco
+     
+
+
+    
+    function crearSpinner() {
+        
+
+        spinnerContainerDiv.innerHTML = `
+        <div id="spinner" class="hidden">
+                <div class="sk-chase">
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                </div>
+        </div>
+        `;
+    }
+    
+
+    function enviarInfo(e){
+
+        e.preventDefault();
+
+        crearSpinner();
+
+        setTimeout(() => {
+            spinnerContainerDiv.innerHTML = '';
+            
+            // comprobarInfo();
+
+            // Crear una Alerta
+            alertaRptoGuardadoExito();
+            
+
+        }, 1500);
+        
+        // info.linea = '';
+        // info.categoria = '';
+
+        formulario.reset()
+
+    }
 
     function validar(e){
         if(e.target.value.trim() === ""){
@@ -31,8 +80,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
         //Asignar los valores
         info[e.target.id] = e.target.value.trim().toLowerCase();
-        console.log(info);
         
+        
+        //Comprobar los valores
+        // comprobarInfo();
         
     }  
     
@@ -57,5 +108,29 @@ document.addEventListener('DOMContentLoaded', function() {
             alerta.remove();
         }
     }
+
+    function alertaRptoGuardadoExito() {
+        const alertaExito = document.createElement('P');
+            alertaExito.classList.add('estilo-alerta');
+            alertaExito.textContent = 'Repuesto guardado exitosamente';
+
+            formulario.appendChild(alertaExito);
+            
+
+            setTimeout(() => {
+                alertaExito.remove();
+            },1500);
+    }
+
+    
+
+    // function comprobarInfo(){
+    //     if(Object.values(info).includes('')){
+
+    //     }else{
+           
+
+    //     }
+    // }
 
 });
