@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         formulario.reset();
 
-        //Resetear el objeto info despues de enviar el formulario de la
+        //Resetear el objeto info despues de enviar el formulario de todos los campos son ovligatorios
         info.linea ='';
         info.categoria ='';
         info.modelo ='';
