@@ -24,8 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Confirmaar que el formulario no este en blanco
      
-
-
     
     function crearSpinner() {
         
@@ -49,12 +47,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
         e.preventDefault();
 
+        //Limpiar alerta antes de mostrar una nueva
+        limpiarAlerta(formulario);
+
+        //Verificar si todos los campos estan llenos
+         if(info.linea === '' || info.categoria === '' || info.modelo === ''){
+            mostrarAlerta('Todos los campos son obligatorios', formulario);
+            return;
+
+         }
+       
+
         crearSpinner();
 
         setTimeout(() => {
             spinnerContainerDiv.innerHTML = '';
             
-            // comprobarInfo();
 
             // Crear una Alerta
             alertaRptoGuardadoExito();
@@ -62,10 +70,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
         }, 1500);
         
-        // info.linea = '';
-        // info.categoria = '';
 
-        formulario.reset()
+        formulario.reset();
+
+        //Resetear el objeto info despues de enviar el formulario de la
+        info.linea ='';
+        info.categoria ='';
+        info.modelo ='';
 
     }
 
@@ -106,13 +117,16 @@ document.addEventListener('DOMContentLoaded', function() {
         const alerta = referencia.querySelector('.estilo');
         if(alerta){
             alerta.remove();
+        
         }
     }
+
+    
 
     function alertaRptoGuardadoExito() {
         const alertaExito = document.createElement('P');
             alertaExito.classList.add('estilo-alerta');
-            alertaExito.textContent = 'Repuesto guardado exitosamente';
+            alertaExito.textContent = '¡Repuesto guardado exitosamente!';
 
             formulario.appendChild(alertaExito);
             
@@ -123,14 +137,4 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     
-
-    // function comprobarInfo(){
-    //     if(Object.values(info).includes('')){
-
-    //     }else{
-           
-
-    //     }
-    // }
-
 });

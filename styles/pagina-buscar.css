@@ -147,8 +147,8 @@ form .button input:hover{
 }
  /* Estilo a los select */
 .caja {
-    margin:20px auto 40px auto;	
-    border:1px solid #D2B4DE;
+    margin:10px auto 10px auto;	
+    border-radius: 10px;
     height:30px;
     overflow: hidden;
     width: 230px;
@@ -157,11 +157,11 @@ form .button input:hover{
  }
 
  select {
-    background:transparent;
+    background:#e3f2fd;
     border: none;
     font-size: 14px;
     height: 30px;
-    padding: 5px;
+    padding:2px;
     width: 250px;
     cursor: pointer;
  }
