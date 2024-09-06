@@ -9,27 +9,25 @@ document.addEventListener('DOMContentLoaded', function() {
     //Seleccionar elementos de la interfaz
     const inputLinea = document.querySelector('#linea');
     const inputCategoria = document.querySelector('#categoria');
+    const inputModelo = document.querySelector('#year');
     const formulario = document.querySelector('#formulario');
-    const inputDate = document.querySelector('#modelo');
-    // const btnSubmit = document.querySelector('#formulario button[type="submit"]');
     const spinnerContainerDiv = document.querySelector('.container-div');
-    
-    
+
 
     //Asignar eventos
     inputLinea.addEventListener('blur', validar );
     inputCategoria.addEventListener('blur', validar);
-    inputDate.addEventListener('blur', validar);
+    inputModelo.addEventListener('blur', validar);
     formulario.addEventListener('submit', enviarInfo);
     
     // Confirmaar que el formulario no este en blanco
+   
      
     
     function crearSpinner() {
-        
 
         spinnerContainerDiv.innerHTML = `
-        <div id="spinner" class="hidden">
+        <div id="spinner">
                 <div class="sk-chase">
                     <div class="sk-chase-dot"></div>
                     <div class="sk-chase-dot"></div>
@@ -46,12 +44,12 @@ document.addEventListener('DOMContentLoaded', function() {
     function enviarInfo(e){
 
         e.preventDefault();
-
+        
         //Limpiar alerta antes de mostrar una nueva
         limpiarAlerta(formulario);
 
         //Verificar si todos los campos estan llenos
-         if(info.linea === '' || info.categoria === '' || info.modelo === ''){
+         if(info.linea === '' || info.categoria === '' || info.year === ''){
             mostrarAlerta('Todos los campos son obligatorios', formulario);
             return;
 
@@ -76,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
         //Resetear el objeto info despues de enviar el formulario de todos los campos son ovligatorios
         info.linea ='';
         info.categoria ='';
-        info.modelo ='';
+        info.year = '';
 
     }
 
@@ -120,8 +118,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
         }
     }
-
-    
 
     function alertaRptoGuardadoExito() {
         const alertaExito = document.createElement('P');
